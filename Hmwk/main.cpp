@@ -1,8 +1,8 @@
 /* 
  * File:   main.cpp
  * Author: Jonathan Hazelton
- * Created on June 27, 2022, 12:12 PM
- * Purpose: Energy Drink Problem
+ * Created on June 30, 2022, 10:34 AM
+ * Purpose: Annual Pay Problem
  */
 
 //System Libraries
@@ -13,7 +13,6 @@ using namespace std;
 
 //Global Constants
 //Mathematical/Physics/Conversions, Higher dimensioned arrays
-const unsigned char PERCENT=100; //Conversion to percentage
 
 //Function Prototypes
 
@@ -22,25 +21,22 @@ int main(int argc, char** argv) {
     //Initialize the Random Number Seed
     
     //Declare Variables
-    unsigned short cstSrvy, //Number of customers surveyed
-                   nEndr, //Number of Energy Drinkers
-                   nCit; //Number of Citrus Drinkers
-    unsigned char  prcEndr, //Percent of Energy Drinkers
-                   prcCit; //Percent of Citrus Drinkers
+    float       pyamnt, //Pay Amount $2200 every 2 weeks
+                pyprd, //Pay Periods of 26 per year
+                annlpy; //Annual Pay
+    
     
     //Initialize Variables
-    cstSrvy=16500; //16500
-    prcEndr=15; //15 Percent
-    prcCit=58; //58 Percent
+    pyamnt=2.2e3f; //$2,200
+    pyprd=2.6e1f; //26 Pay Periods
+    
     
     //Map inputs to outputs -> The Process
-    nEndr=cstSrvy*prcEndr/PERCENT;
-    nCit=nEndr*prcCit/PERCENT;
+   annlpy=pyamnt*pyprd;
     
     //Display Results
-    cout<<"Number of Customers that use Energy Drinks = "<<nEndr<<endl;
-    cout<<"Number of Customers that prefer Citrus Drinks = "<<nCit<<endl;
-    
+    cout<<"Annual Pay = $"<<annlpy<<endl;
+   
     
     //Exit Stage Right
     return 0;
